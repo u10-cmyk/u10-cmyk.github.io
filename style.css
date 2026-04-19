@@ -1,0 +1,203 @@
+/* ==============================================
+   U10_7 Personal Blog - style.css
+   ============================================== */
+
+/* フォント読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+/* ========== リセット & ベース ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0ede4;
+    /* 薄いドット模様の背景 */
+    background-image: radial-gradient(#c8bfa8 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #2c2416;
+    font-family: 'Noto Serif JP', 'MS明朝', 'ＭＳ 明朝', serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ========== ページ全体のコンテナ ========== */
+body > * {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ========== ヘッダー ========== */
+header {
+    background-color: #5c4a2a;
+    border-bottom: 4px double #a07850;
+    padding: 18px 24px 14px;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+header::before,
+header::after {
+    content: '◆';
+    color: #d4b483;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header::before { left: 16px; }
+header::after  { right: 16px; }
+
+header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fdf3e0;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 0 #2c1a00;
+}
+
+/* ========== セクション共通 ========== */
+section {
+    background-color: #fdfaf3;
+    border: 1px solid #c4aa80;
+    border-top: 3px solid #8a6a3a;
+    margin: 16px auto;
+    padding: 18px 24px 20px;
+    box-shadow: 3px 3px 0 #c4aa80;
+}
+
+section h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5c3d0a;
+    border-bottom: 1px dashed #b09060;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    letter-spacing: 0.08em;
+}
+
+section h2::before {
+    content: '■ ';
+    color: #9a6a20;
+    font-size: 11px;
+}
+
+/* ========== 自己紹介 ========== */
+#about p {
+    font-size: 13px;
+    color: #3a2c14;
+}
+
+/* ========== リンク一覧 ========== */
+#links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#links ul li {
+    border-bottom: 1px dotted #d0b888;
+    padding: 5px 0;
+}
+
+#links ul li:last-child {
+    border-bottom: none;
+}
+
+#links ul li a {
+    color: #5a3e8a;
+    text-decoration: none;
+    font-size: 13px;
+    padding-left: 14px;
+    position: relative;
+    transition: color 0.15s;
+}
+
+#links ul li a::before {
+    content: '→ ';
+    color: #9a7030;
+    position: absolute;
+    left: 0;
+}
+
+#links ul li a:hover {
+    color: #a0501a;
+    text-decoration: underline;
+}
+
+#links ul li a:visited {
+    color: #7a5aaa;
+}
+
+/* ========== ニュース ========== */
+#news ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news ul > li {
+    border: 1px solid #d8c298;
+    background-color: #faf6ec;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+}
+
+#news ul > li p {
+    font-size: 12px;
+    color: #7a5a1a;
+    font-weight: 700;
+    margin-bottom: 8px;
+    border-left: 3px solid #b08030;
+    padding-left: 8px;
+}
+
+/* iframeとblockquoteの余白調整 */
+iframe {
+    display: block;
+    margin: 8px 0;
+    max-width: 100%;
+}
+
+blockquote.twitter-tweet {
+    margin: 8px 0 !important;
+}
+
+/* ========== リンク全般 ========== */
+a {
+    color: #5a3e8a;
+}
+
+a:visited {
+    color: #7a5aaa;
+}
+
+a:hover {
+    color: #a0501a;
+}
+
+/* ========== フッター ========== */
+footer {
+    text-align: center;
+    padding: 14px 0 24px;
+    font-size: 11px;
+    color: #8a7050;
+    letter-spacing: 0.05em;
+}
+
+/* ========== スクロールバー（Webkit） ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e8dfc8;
+}
+::-webkit-scrollbar-thumb {
+    background: #a08050;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7a5a30;
+}
